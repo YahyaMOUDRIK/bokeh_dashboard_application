@@ -1,5 +1,7 @@
 # Dashboard de Visualisation de Données Agricoles au Maroc
 
+Projet Réalisé par Yahya MOUDRIK et Hiba ASGHAR
+
 ## Choix des Données
 
 Le choix de se concentrer sur les données agricoles au Maroc sest du au fait que l'agriculture représente l'un des secteurs les plus importants de l'économie marocaine. Le Maroc est reconnu pour ses activités agricoles diversifiées, allant des cultures céréalières aux productions fruitières et maraîchères. De plus ce secteur connait ces derniers temps des difficultés vu le manque des précipitations. Donc analyser et visualiser les données relatives à ce domaine clé offre une perspective précieuse sur l'évolution et les tendances de ce secteur crucial.

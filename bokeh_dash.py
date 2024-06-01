@@ -31,13 +31,13 @@ source_surface = ColumnDataSource(data={
 product_select = Select(title='Sélectionner un produit:', value=initial_product, options=products)
 
 # Visualisation des productions
-plot_production = figure(x_axis_type='datetime', height=400, width=800, title='Évolution de la production')
+plot_production = figure(x_axis_type='datetime', height=400, width=800, title='Évolution de la production du produit choisi')
 plot_production.line(x='Occurrence', y='Valeur', source=source_production, line_width=2)
 plot_production.xaxis.axis_label = 'Année'
 plot_production.yaxis.axis_label = 'Production'
 
 # Visualisation des surfaces cultivés
-plot_surface = figure(x_axis_type='datetime', height=400, width=800, title='Évolution de la surface cultivée')
+plot_surface = figure(x_axis_type='datetime', height=400, width=800, title='Évolution de la surface cultivée du produit choisi')
 plot_surface.line(x='Occurrence', y='Valeur', source=source_surface, line_width=2)
 plot_surface.xaxis.axis_label = 'Année'
 plot_surface.yaxis.axis_label = 'Surface cultivée'
@@ -67,17 +67,18 @@ product_select.on_change('value', update_data)
 
 # Production totale annuelle
 production_annuelle = quantity_producted_df.groupby('Occurrence')['Valeur'].sum().reset_index()
-plot_production_annuelle = figure(x_axis_type='datetime', height=400, width=800, title='Production avec le temps')
+plot_production_annuelle = figure(x_axis_type='datetime', height=400, width=800, title='Production totale avec le temps')
 plot_production_annuelle.line(x='Occurrence', y='Valeur', source=ColumnDataSource(production_annuelle), line_width=2)
 plot_production_annuelle.xaxis.axis_label = 'Année'
 plot_production_annuelle.yaxis.axis_label = 'Production'
 
 # Surface totale cultivée par an
 surface_cultivée = surface_df.groupby('Occurrence')['Valeur'].sum().reset_index()
-plot_surface_cultivée = figure(x_axis_type='datetime', height=400, width=800, title='Surface cultivée par an')
+plot_surface_cultivée = figure(x_axis_type='datetime', height=400, width=800, title='Surface totale cultivée par an')
 plot_surface_cultivée.line(x='Occurrence', y='Valeur', source=ColumnDataSource(surface_cultivée), line_width=2)
 plot_surface_cultivée.xaxis.axis_label = 'Année'
 plot_surface_cultivée.yaxis.axis_label = 'Surface'
+
 
 layout = column(
     product_select,
