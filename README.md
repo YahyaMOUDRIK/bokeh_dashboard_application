@@ -20,7 +20,7 @@ Le dashboard créé avec Bokeh offre une expérience interactive permettant à l
 
 L'analyse des données agricoles au Maroc a permis de tirer les conclusions suivantes :
 
-- **Année de production maximale** : 2021 a connu la production la plus élevée dans l'ensemble des données analysées.
+- **Année de production maximale** : 2020 a connu la production la plus élevée dans l'ensemble des données analysées.
 - **Année de production minimale** : 2022 a enregistré la production la plus faible.
 - **Produit le plus produit** : La luzerne est le produit ayant connu la production la plus importante.
 - **Produit le plus cultivé** : Le blé tendre est le produit ayant la plus grande superficie cultivée.
